@@ -1,4 +1,0 @@
-m2f_K3_iter_90000.pth
-https://drive.google.com/file/d/199AWAwd8n758zGUQIJlDVl_wd3dz1AwT/view?usp=share_link
-m2f_K4_iter_90000.pth
-https://drive.google.com/file/d/1C637rkVaIV14SmdTHMzFM4SYQp-ceY6e/view?usp=share_link
