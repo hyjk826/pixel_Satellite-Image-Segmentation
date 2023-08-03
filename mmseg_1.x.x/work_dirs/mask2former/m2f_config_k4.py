@@ -131,7 +131,7 @@ img_ratios = [
     1.75,
 ]
 launcher = 'none'
-load_from = '/home/jovyan/work/work_space/mjh/mmsegmentation/work_dirs/m2f_k3/best_mDice_iter_90000.pth'
+load_from = None
 log_level = 'INFO'
 log_processor = dict(by_epoch=False)
 model = dict(
