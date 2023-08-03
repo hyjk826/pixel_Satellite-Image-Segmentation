@@ -258,7 +258,8 @@ visualizer = dict(
     name='visualizer')
 log_processor = dict(by_epoch=False)
 log_level = 'INFO'
-load_from = 'swin90.19_first_Train_iter_158000.pth' #google drive link에서 다운후 가능합니다.
+load_from = None
+#'swin90.19_first_Train_iter_158000.pth' #google drive link에서 다운후 가능합니다.
 resume = False
 tta_model = dict(type='SegTTAModel')
 optimizer = dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0005)
