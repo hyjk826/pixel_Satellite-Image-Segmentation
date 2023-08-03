@@ -1,3 +1,4 @@
+# 참고 자료: https://www.kaggle.com/code/meaninglesslives/apply-crf/notebook
 import os
 import cv2
 import torch
