@@ -83,8 +83,7 @@ model = dict(
         norm_cfg=dict(type='LN', requires_grad=True),
         init_cfg=dict(
             type='Pretrained',
-            checkpoint=
-            '/raid/pixelteam/mmsegmentation/configs/_mjh/pretrained/swin_large_patch4_window12_384_22k_20220412-6580f57d.pth'
+            checkpoint= 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_large_patch4_window12_384_22k_20220412-6580f57d.pth'
         )),
     decode_head=dict(
         type='UPerHead',
@@ -129,7 +128,7 @@ model = dict(
     train_cfg=dict(),
     test_cfg=dict(mode='whole'))
 dataset_type = 'satellite'
-data_root = '/raid/pixelteam/satellite3'
+data_root = '/raid/pixelteam/satellite3' #데이터 루트 설정
 crop_size = (
     512,
     512,
@@ -190,7 +189,7 @@ train_dataloader = dict(
     sampler=dict(type='InfiniteSampler', shuffle=True),
     dataset=dict(
         type='satellite',
-        data_root='/raid/pixelteam/satellite3',
+        data_root='/raid/pixelteam/satellite3', #데이터 루트 설정
         data_prefix=dict(
             img_path='train_img', seg_map_path='anno_train_img_gray'),
         pipeline=[
@@ -212,7 +211,7 @@ val_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         type='satellite',
-        data_root='/raid/pixelteam/satellite3',
+        data_root='/raid/pixelteam/satellite3', #데이터 루트 설정
         data_prefix=dict(
             img_path='valid_img', seg_map_path='anno_valid_img_gray'),
         pipeline=[
@@ -227,7 +226,7 @@ test_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         type='satellite',
-        data_root='/raid/pixelteam/satellite3',
+        data_root='/raid/pixelteam/satellite3', #데이터 루트 설정
         data_prefix=dict(
             img_path='valid_img', seg_map_path='anno_valid_img_gray'),
         pipeline=[
@@ -302,6 +301,6 @@ default_hooks = dict(
         save_best='mDice'),
     sampler_seed=dict(type='DistSamplerSeedHook'),
     visualization=dict(type='SegVisualizationHook'))
-checkpoint_file = '/raid/pixelteam/mmsegmentation/configs/_mjh/pretrained/swin_large_patch4_window12_384_22k_20220412-6580f57d.pth'
+checkpoint_file = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_large_patch4_window12_384_22k_20220412-6580f57d.pth'
 launcher = 'pytorch'
 work_dir = './work_dirs/swin2'
